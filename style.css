@@ -1,0 +1,101 @@
+/* Reset & Global */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #111;
+  color: #fff;
+  overflow: hidden;
+}
+
+/* Main Container */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Side Panels */
+.side-panel {
+  width: 20vw;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.side-panel img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.65;
+}
+
+/* Game Area */
+.game-area {
+  text-align: center;
+  background: #1f1f1f;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 0 20px #00ff99;
+  margin: 0 2vw;
+  max-width: 100%;
+}
+
+/* Canvas */
+canvas {
+  background-color: black;
+  border: 2px solid #00ff99;
+}
+
+/* Controls */
+.controls {
+  margin-top: 15px;
+}
+button {
+  background-color: #00ff99;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  margin: 5px;
+  border-radius: 6px;
+  cursor: pointer;
+  color: #000;
+  transition: background-color 0.3s;
+}
+button:hover {
+  background-color: #00cc77;
+}
+
+/* Score Display */
+.scoreboard {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #fffb00;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+  .side-panel {
+    display: none;
+  }
+  .game-area {
+    margin: 20px 10px;
+    width: 90vw;
+  }
+  canvas {
+    width: 100%;
+    height: auto;
+  }
+}
